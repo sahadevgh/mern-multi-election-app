@@ -127,7 +127,3 @@ This project is primarily for teaching purposes. Students are welcome to fork th
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Would you like me to also add **step-by-step student exercises** (like checkpoints: setup backend → add models → build auth → connect frontend, etc.) so your students can follow along in stages?
