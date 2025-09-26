@@ -1,16 +1,133 @@
-# React + Vite
+# Multi-Election Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application built with the **MERN stack** (MongoDB, Express, React, Node.js) that allows users to create, manage, and participate in multiple elections. This project is designed as a teaching resource for students learning the MERN stack at Hackerboost Developer Hub. The goal of this project is to help students understand how to build a full-stack application by gradually implementing features.
 
-Currently, two official plugins are available:
+It is not intended for production use, but for learning and demonstration purposes only.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* User authentication and authorization (JWT-based)
+* Role-based access (admin, candidate, voter)
+* Create and manage multiple elections
+* Candidate registration and management
+* Secure voting system (one vote per user per election)
+* Real-time vote counting and results display
+* Responsive UI built with React and TailwindCSS
+* RESTful API backend with Node.js and Express
+* MongoDB database for scalable data storage
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+**Frontend**
+
+* React
+* React Router
+* TailwindCSS / CSS Modules
+* Axios
+
+**Backend**
+
+* Node.js
+* Express.js
+* MongoDB with Mongoose
+* JSON Web Tokens (JWT)
+* Bcrypt for password hashing
+
+**Development Tools**
+
+* Git & GitHub
+* Postman (API testing)
+* ESLint & Prettier (code formatting)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js (>= 16)
+* npm or yarn
+* MongoDB (local or cloud via MongoDB Atlas)
+* Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sahadevgh/mern-multi-election-app.git
+   cd mern-multi-election-app
+   ```
+
+2. Install dependencies for both client and server:
+
+   ```bash
+   cd client
+   npm install
+   cd ../server
+   npm install
+   ```
+
+3. Create a `.env` file in the `server` folder and add:
+
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
+   PORT=5000
+   ```
+
+4. Start the development servers:
+
+   * Backend:
+
+     ```bash
+     cd server
+     npm run dev
+     ```
+   * Frontend:
+
+     ```bash
+     cd client
+     npm start
+     ```
+
+5. Open the application at:
+
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## Project Structure
+
+```
+mern-multi-election-app/
+│
+├── client/            # React frontend
+├── server/            # Express backend
+├── README.md          # Documentation
+└── package.json       # Project metadata
+```
+
+---
+
+## Contributing
+
+This project is primarily for teaching purposes. Students are welcome to fork the repository, experiment, and submit pull requests. Please follow good Git commit practices and include clear commit messages.
+
+---
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Would you like me to also add **step-by-step student exercises** (like checkpoints: setup backend → add models → build auth → connect frontend, etc.) so your students can follow along in stages?
