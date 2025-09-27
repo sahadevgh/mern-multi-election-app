@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ElectionCard from "../components/ElectionCard";
+import CreateElectionModal from "@/components/modals/CreateElectionModal";
 
 const mockElections = [
   {
@@ -33,12 +34,20 @@ const mockElections = [
 ];
 
 function ElectionsPage() {
+  const [newElectionModalOpen, setNewElectionModalOpen] = useState(false);
+
+  // const anyFunction = () =>{
+  //   isOpeningModal = false
+  // }
+
   return (
     <div className="text-black dark:text-white">
       <div className="w-full p-6">
         <div className="max-w-7xl mx-auto flex justify-between mb-8">
           <h2 className="uppercase font-bold">Ongoing Elections</h2>
-          <button className="px-4 py-2 bg-yellow-600 rounded shadow hover:bg-amber-600 hover:scale-95 cursor-pointer">
+          <button 
+          onClick={() => setNewElectionModalOpen(!newElectionModalOpen)}
+          className="px-4 py-2 bg-yellow-600 rounded shadow hover:bg-amber-600 hover:scale-95 cursor-pointer">
             Create New Election
           </button>
         </div>
@@ -48,6 +57,10 @@ function ElectionsPage() {
           ))}
         </div>
       </div>
+      <CreateElectionModal 
+        newElectionModalOpen={newElectionModalOpen} 
+        setNewElectionModalOpen={setNewElectionModalOpen}
+      />
     </div>
   );
 }
